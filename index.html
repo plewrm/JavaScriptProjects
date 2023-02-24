@@ -1,0 +1,27 @@
+<!-- The program of type any text in textfield and show what you type --> -->
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    <p>Please show input field text are you typing type</p><br>
+    <input type="text" class="effect-1" onkeypress="keyPress()" onkeydown="keyDown()" onkeyup="keyUp()">
+    <br/>
+    <p id="keys"> </p>
+</div>
+</body>
+<script>
+    const keyPress=()=>{
+        document.getElementById('keys').innerHTML=`you press${event.key} and code is ${event.code}`
+    }
+</script>
+</html>
+
+
+

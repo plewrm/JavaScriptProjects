@@ -1,0 +1,22 @@
+{
+    "client":[
+        {
+            "id":1,
+            "name":"xene",
+            "code":"12323",
+            "location":"USA"
+        },
+        {
+            "id":2,
+            "name":"IBM",
+            "code":"34323",
+            "location":"UAE"
+        },
+        {
+            "id":3,
+            "name":"Accen",
+            "code":"98323",
+            "location":"US"
+        }
+    ]
+}
