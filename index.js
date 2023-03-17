@@ -79,11 +79,11 @@
 //Conditional (ternary) operator
 
 // var age = 20;
-// console.log(age >= 18 ? "eligible" : "Not eligible");
+// console.log(age >= 18 ? "Eligible" : "Not eligible");
 
 //Switch Statement
 
-// var area = "trangle";
+// var area = "circle";
 // var PI = 3.142,
 //   l = 5,
 //   b = 4,
@@ -192,7 +192,7 @@
 //     console.log(elements)
 // }
 
-//forEach()
+//forEach()---the forEach() call a function once for each element in an array in order.
 
 //  var nameList= ['pawan','Rawan','Suprit','Jadu','Anshul'];
 
@@ -238,16 +238,16 @@
 //5.delete all element after march from an array
 
 // const months= ['Jan','march','April','jun','july']
-// 1.
-// const newMonth= months.splice(months.length,0,'Dec')
+// // 1.
+// const newMonth= months.push(months.length,0,'Dec')
 // console.log(months)
 
 // const months= ['Jan','march','April','jun','july']
-// 2.
+// // 2.
 // console.log(months)//its return new array
 
 // const months= ['Jan','march','April','jun','july']
-// 3.
+// // 3.
 // const indexOfMonth =months.indexOf('march');
 // if(indexOfMonth != -1){
 //     const updateMonth=months.splice(indexOfMonth,1,'March')
@@ -258,7 +258,7 @@
 // }
 
 // const months= ['Jan','march','April','jun','july']
-// 4.
+// // 4.
 // const indexOfMonth =months.indexOf('jun');
 // if(indexOfMonth != -1){
 //     const updateMonth=months.splice(indexOfMonth,1)
@@ -294,7 +294,7 @@
 // });
 // console.log(newArr);
 
-// find suareroot of given array
+// find sqareroot of given array
 
 // let arrOld = [65, 49, 54, 88, 20, 25];
 // let arrSqr = arrOld.map((curElm) => {
@@ -355,13 +355,13 @@
 // console.log(res)
 
 // var str= "Pawan Vasant Salve From AhmedNagar";
-// let res= str.slice(0,80);
+// let res= str.slice(0,30);
 // console.log(res)
 
 //substring()
 
 // var str= "iphone, sony, oneplus";
-// let resp=str.substring(0,5);
+// let resp=str.substring(0,7);
 // console.log(resp);
 
 //substr()- catch data from back side
@@ -417,7 +417,7 @@
 
 /*********** Date and Time in JavaScript  **************/
 
-//thereae 4 ways to create Date object we can use new Date() constructor.
+//there are 4 ways to create Date object we can use new Date() constructor.
 
 // let currDate = new Date();
 // console.log(currDate);
@@ -597,5 +597,5 @@
 
 //currying 
 
-const sum =(no1)=>(no2)=>(no3)=>console.log(no1+no2+no3);
-sum (3)(5)(8);
+// const sum =(no1)=>(no2)=>(no3)=>console.log(no1+no2+no3);
+// sum (3)(5)(8);
