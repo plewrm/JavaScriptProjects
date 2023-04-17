@@ -310,6 +310,26 @@
 // let arrarNew= arrayy.map((curElm)=>curElm*2).filter((curElm)=>curElm>10);
 // console.log(arrarNew);
 
+//display array elements are greater than 100 single
+
+// const arr = [10, 200, 50, 100, 300];
+
+// const result = arr.find(num => num > 100);
+
+// console.log(result);
+
+// Output: [200] its return only one element
+
+//display array elements are greater than 100 single
+
+// const arr1 = [10, 200, 50, 100, 300];
+
+// const results = arr1.filter(number => number > 100);
+
+// console.log(results);
+
+// Output: [200,300] its return greater elements
+
 //display sum of array element
 
 //  let arrayy= [2,3,4,54,34];
@@ -595,7 +615,211 @@
 // };
 // fun1();
 
-//currying 
+//currying
 
 // const sum =(no1)=>(no2)=>(no3)=>console.log(no1+no2+no3);
+// // console.log(sum);
 // sum (3)(5)(8);
+
+// Promise program in javascript
+// const sumOfElement=(...elem)=>{
+// return new Promise((resolve, reject)=>{
+//     if(elem.length>3){
+//         reject("only three")
+//     }else{
+//         let sum=0;
+//         let i=0;
+//         while(i<elem.length){
+//             sum+=elem[i];
+//             i++;
+//         }
+//         console.log(sum);
+//         resolve("see the sum"+sum)
+//     }
+// })
+// }
+
+// sumOfElement(44,34,2);
+
+// reverse string function
+
+// let word = "hello word";
+// let reversedWord = "";
+
+// // Loop through the word backwards
+// for (let i = word.length - 1; i >= 0; i--) {
+//   reversedWord += word[i];
+// }
+
+// console.log(reversedWord);
+
+// reverse string without using fuctions and without change position
+
+// let str = "hello world";
+// let words = str.split(" ");
+// let reversedStr = "";
+
+// for (let i = 0; i < words.length; i++) {
+//   let word = words[i];
+//   let reversedWord = "";
+//   for (let j = word.length - 1; j >= 0; j--) {
+//     reversedWord += word[j];
+//   }
+//   reversedStr += reversedWord + " ";
+// }
+
+// console.log(reversedStr.trim());
+
+//count of each character of a srting in javascript with function
+
+// const string = "pawan salve pawan vasant salve";
+// const frequency = {};
+
+// string.split('').forEach(function(char) {
+//   frequency[char] = frequency[char] ? frequency[char] + 1 : 1;
+// });
+
+// console.log(frequency);
+
+// count of each character of a srting in javascript without using function
+// const str = "pawan salve pawan vasant salve";
+
+// // Create an object to store the character counts
+// const charCounts = {};
+
+// // Loop through the string and increment the count for each character
+// for (let i = 0; i < str.length; i++) {
+//   const char = str[i];
+//   if (charCounts[char]) {
+//     charCounts[char]++;
+//   } else {
+//     charCounts[char] = 1;
+//   }
+// }
+
+// // Log the character counts
+// for (const char in charCounts) {
+//   console.log(char + ": " + charCounts[char]);
+// }
+
+//check a given string are same or not
+// var s1 = "angraj";
+// var s2 = "nagraj";
+// var areEqual = true;
+
+// // Check if the strings have the same length
+// if (s1.length !== s2.length) {
+//   areEqual = false;
+// } else {
+//   // Compare each character of both strings at the same position
+//   for (var i = 0; i < s1.length; i++) {
+//     if (s1[i] !== s2[i]) {
+//       areEqual = false;
+//       break;
+//     }
+//   }
+// }
+
+// // Print the result
+// if (areEqual) {
+//   console.log("The strings are the same");
+// } else {
+//   console.log("The strings are different");
+// }
+
+//i have 2 string nagraj and angraj create a function which return true if both strings are contain same characters
+// function areStringsEqual(s1, s2) {
+//     // Check if the strings have the same length
+//     if (s1.length !== s2.length) {
+//       return false;
+//     }
+
+//     // Sort the characters in both strings
+//     var sortedS1 = s1.split("").sort().join("");
+//     var sortedS2 = s2.split("").sort().join("");
+
+//     // Compare the sorted strings
+//     return sortedS1 === sortedS2;
+//   }
+
+//   // Example usage:
+//   console.log(areStringsEqual("nagraj", "angraj")); // Returns true
+//   console.log(areStringsEqual("nagraj", "anirudh")); // Returns false
+
+//   i have 2 string nagraj and angraj create a function which return true if both strings are contain same characters without using function
+
+// function areStringsEqual(s1, s2) {
+//   // Check if the strings have the same length
+//   if (s1.length !== s2.length) {
+//     return false;
+//   }
+
+//   // Compare each character of both strings at the same position
+//   for (var i = 0; i < s1.length; i++) {
+//     if (s1[i] !== s2[i]) {
+//       return false;
+//     }
+//   }
+
+//   // If we reach this point, the strings are equal
+//   return true;
+// }
+
+// // Usage example
+// var s1 = "nagraj";
+// var s2 = "angraj";
+
+// if (areStringsEqual(s1, s2)) {
+//   console.log("The strings are equal");
+// } else {
+//   console.log("The strings are different");
+// }
+
+
+// print most use character in this string
+// function secondWord(str1) {
+//   const words = str1.split("");
+//   const seaprate = {};
+//   for (let i = 0; i < words.length; i++) {
+//     const word = words[i];
+//     seaprate[word] = (seaprate[word] || 0) + 1;
+//   }
+
+//   let count = -1;
+//   let largeCount = -1;
+//   let wordMax = "";
+//   let largeWordmax = "";
+
+//   for (let word in seaprate) {
+//     const allCount = seaprate[word];
+//     if (allCount > count) {
+//       largeCount = count;
+//       largeWordmax=wordMax;
+//       count = allCount;
+//       wordMax=word;
+//     } else if (allCount > largeCount && allCount < count) {
+//       largeCount = allCount;
+//       largeWordmax = word;
+//     }
+//   }
+// return largeWordmax;
+// }
+
+// const str1='my name is pawan salve i am ready  to relocate';
+// const secondOccuredWord=secondWord(str1);
+// console.log(secondOccuredWord);
+
+//print second most occurring char in given string
+// function secondMostOccurringChar(str) {
+//   const freq = {};
+//   for (let i = 0; i < str.length; i++) {
+//     const char = str[i];
+//     freq[char] = freq[char] ? freq[char] + 1 : 1;
+//   }
+//   const sortedChars = Object.keys(freq).sort((a, b) => freq[b] - freq[a]);
+//   return sortedChars[1];
+// }
+
+// const str = "abbcddddeeeeffffg";
+// const secondMostOccurring = secondMostOccurringChar(str);
+// console.log(secondMostOccurring); 
