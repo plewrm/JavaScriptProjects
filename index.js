@@ -355,6 +355,47 @@
 // })
 // console.log(flatArr)
 
+// Display greater number than 100
+
+// function findNumbersGreaterThan100(arr) {
+//     const result = [];
+//     for (let i = 0; i < arr.length; i++) {
+//       if (arr[i] > 100) {
+//         result.push(arr[i]);
+//       }
+//     }
+//     return result;
+//   }
+//   const numbers = [50, 110, 75, 200, 90];
+//   const greaterThan100 = findNumbersGreaterThan100(numbers);
+//   console.log(greaterThan100);
+
+//o/p- 110,200
+
+// Display single value of an array are greater than 100 without using builtin functions
+
+// const arr = [100, 110, 101, 200, 321];
+// // const resp = arr.sort();
+// let result = null;
+// for (let i = 0; i < arr.length - 1; i++) {
+//   for (let j = 0; j < arr.length - i - 1; j++) {
+//     if (arr[j] > arr[j + 1]) {
+//       let temp = arr[j];
+//       arr[j] = arr[j + 1];
+//       arr[j + 1] = temp;
+//     }
+//   }
+// }
+
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i] > 100) {
+//     result = arr[i];
+//     break;
+//   }
+// }
+// console.log(result);
+
+
 /*********** Strings in JavaScript  **************/
 
 //find string in a string
@@ -422,6 +463,11 @@
 
 // let str ="HELLO PAWAN";
 // console.log(str[2])
+
+//convert string into Array
+// let str1 = "Pawan Vasant Salve";
+// let arr = str1.split(" ");
+// console.log(arr);
 
 //concate()
 
@@ -641,6 +687,22 @@
 
 // sumOfElement(44,34,2);
 
+// let myPromise= new Promise((resolve,reject)=>{
+//     let a=30;
+//     if(a==30){
+//         resolve('Success');
+//     }
+//     else{
+//         reject('Failed');
+//     }
+// })
+// myPromise.then((message)=>{
+//     console.log("It is Then Block. the message is :"+ message);
+// }).catch((message)=>{
+//     console.log("It is Catch Block. the message is :"+ message);
+
+// })
+
 // reverse string function
 
 // let word = "hello word";
@@ -775,7 +837,6 @@
 //   console.log("The strings are different");
 // }
 
-
 // print most use character in this string
 // function secondWord(str1) {
 //   const words = str1.split("");
@@ -822,4 +883,4 @@
 
 // const str = "abbcddddeeeeffffg";
 // const secondMostOccurring = secondMostOccurringChar(str);
-// console.log(secondMostOccurring); 
+// console.log(secondMostOccurring);
