@@ -239,22 +239,42 @@
 
 // const months= ['Jan','march','April','jun','july']
 // // 1.
-// const newMonth= months.push(months.length,0,'Dec')
+// // const newMonth= months.push(months.length,0,'Dec')
+// const newMonth= months.push('Dec')
 // console.log(months)
 
 // const months= ['Jan','march','April','jun','july']
-// // 2.
-// console.log(months)//its return new array
+// // 2. The splice() method in JavaScript is used to add or remove elements from an array. It can be called with two or more arguments
+// console.log(months.splice())//The splice() method returns an array containing the deleted elements, if any. If no elements are deleted, an empty array is returned.
+
+// const array = [1, 2, 3, 4, 5];
+
+// // Remove two elements starting from index 2
+// const deleted = array.splice(2, 2); // returns [3, 4]
+
+// console.log(array); // [1, 2, 5]
+// console.log(deleted); // [3, 4]
 
 // const months= ['Jan','march','April','jun','july']
 // // 3.
 // const indexOfMonth =months.indexOf('march');
 // if(indexOfMonth != -1){
-//     const updateMonth=months.splice(indexOfMonth,1,'March')
+//     const updateMonth=months.splice(indexOfMonth,1,'March')//add element
 //     console.log(months)
 //     console.log(updateMonth)
 // }else{
 //     console.log("no record found...")
+// }
+
+// const month=['jan', 'feb', 'march','April','jun','july']
+
+// const indexOfMonth= month.indexOf('April')
+// if(indexOfMonth != -1){
+// const updateNewMonth= month.splice(indexOfMonth,1)//remove element
+// console.log(updateNewMonth);
+// console.log(month);
+// }else{
+// console.log('No record found');
 // }
 
 // const months= ['Jan','march','April','jun','july']
@@ -320,7 +340,7 @@
 
 // Output: [200] its return only one element
 
-//display array elements are greater than 100 single
+//display array elements are greater than 100
 
 // const arr1 = [10, 200, 50, 100, 300];
 
@@ -335,10 +355,56 @@
 //  let arrayy= [2,3,4,54,34];
 //  let arrarNew= arrayy.reduce((curElm,accumulator)=>(accumulator +=curElm));
 //  console.log(arrarNew);
+/*-------------------//////////////////////------------------------*/
+
+// show here id 3 record
+// let GroupedData = [
+//     {
+//     "id" : 1,
+//     "country" : "UAE"
+//   },
+//   {
+//     "id" : 2,
+//     "country" : "CANADA"
+//   },
+//   {
+//     "id" : 5,
+//     "country" : "NEPAL"
+//   },
+//   {
+//     "id" : 3,
+//     "country" : "UNITED STATES"
+//   },
+//   {
+//     "id" : 4,
+//     "country" : "INDIA"
+//   }
+//   ];
+
+//   const record = GroupedData.find(data=> data.id ===3)
+//   console.log(record);
+
+//React add one more property
+// import React, {useState} from 'react'
+// const [data, setData] = useState({
+//   name: "Pawan",
+//   email: "pawan123@test.com",
+// });
+// setData({...data,phone:'9181837462'})
+
+// console.log(data);
+
+/*-------------------//////////////////////------------------------*/
 
 // let arrayy= [2,3,4,54,34];
 //  let arrarNew= arrayy.map((curElm)=>curElm*2).filter((curElm)=>curElm>10).reduce((curElm,accumulator)=>(accumulator +=curElm));
 //  console.log(arrarNew);
+
+//find out minimum number from an array
+
+// const arr=[10,20,110,2,4,3]
+// const minNo=Math.min(...arr);
+// console.log(minNo);
 
 //convert 2d array and 3d array into 1d array
 
@@ -394,7 +460,6 @@
 //   }
 // }
 // console.log(result);
-
 
 /*********** Strings in JavaScript  **************/
 
