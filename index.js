@@ -1045,7 +1045,15 @@
 
 
 
+// ++++++++======================+++++++++++++++++++++++++
 
+// find unique values
+
+// let arr =[{name:"now"},{name:"now"},{name:"work"},{name:"work"},{name:"now"},{name:"now"}];
+
+// let uniqueValues = [...new Set(arr.map(item => item.name))];
+
+// console.log(uniqueValues);
 
 
 
