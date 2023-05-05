@@ -174,6 +174,28 @@
 
 // Array
 
+//const arr=[2,4,20,15,25] i have this arr want to insert value30 inbetween 15 and 25 in 
+
+// const arr = [2, 4, 20, 15, 25];
+
+// // Find the index of the element 15
+// const index = arr.indexOf(15);
+
+// // Insert the value 30 at the index after 15
+// arr.splice(index + 1, 0, 30);
+
+// console.log(arr); // [2, 4, 20, 15, 30, 25]
+
+
+// //const arr=[2,4,20,15,25] i have this arr want to insert value 1 at starting position 
+
+// const arr1 = [2, 4, 20, 15, 25];
+
+// // Insert the value 1 at the beginning of the array
+// arr1.unshift(1);
+
+// console.log(arr);
+
 // var nameList= ['pawan','Rawan','Suprit','Jadu','Anshul'];
 
 // console.log(nameList[nameList.length-1])
@@ -265,6 +287,7 @@
 // }else{
 //     console.log("no record found...")
 // }
+
 
 // const month=['jan', 'feb', 'march','April','jun','july']
 
@@ -949,3 +972,93 @@
 // const str = "abbcddddeeeeffffg";
 // const secondMostOccurring = secondMostOccurringChar(str);
 // console.log(secondMostOccurring);
+
+
+
+// interview Question*********************++++++++++++=================>>>>>>>>>>>>***********
+
+// https://jsonplaceholder.typicode.com/users  i have this api want to display id 5 record only username, lat and lang
+
+// ----->>>o/p by fetch()
+
+// import { useState, useEffect } from "react";
+
+// function User() {
+//   const [user, setUser] = useState(null);
+
+//   useEffect(() => {
+//     fetch("https://jsonplaceholder.typicode.com/users/5")
+//       .then((response) => response.json())
+//       .then((data) => setUser(data))
+//       .catch((error) => console.log(error));
+//   }, []);
+
+//   return (
+//     <div>
+//       {user && (
+//         <div>
+//           <p>ID: {user.id}</p>
+//           <p>Username: {user.username}</p>
+//           <p>Latitude: {user.address.geo.lat}</p>
+//           <p>Longitude: {user.address.geo.lng}</p>
+//         </div>
+//       )}
+//     </div>
+//   );
+// }
+
+// +++++======>>>> through the Axios  display id 5 record only username, lat and lang
+
+
+// import React, { useEffect, useState } from 'react';
+// import axios from 'axios';
+
+// function UserRecord() {
+//   const [user, setUser] = useState(null);
+
+//   useEffect(() => {
+//     async function fetchUser() {
+//       const response = await axios.get('https://jsonplaceholder.typicode.com/users/5');
+//       const { username, address: { geo: { lat, lng } } } = response.data;
+//       setUser({ username, lat, lng });
+//     }
+
+//     fetchUser();
+//   }, []);
+
+//   return (
+//     <div>
+//       {user ? (
+//         <>
+//           <p>Username: {user.username}</p>
+//           <p>Latitude: {user.lat}</p>
+//           <p>Longitude: {user.lng}</p>
+//         </>
+//       ) : (
+//         <p>Loading user record...</p>
+//       )}
+//     </div>
+//   );
+// }
+
+// export default UserRecord;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
