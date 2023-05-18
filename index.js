@@ -28,9 +28,9 @@
 //The initial value of NaN is Not a Number
 
 // var myName = "pawan";
-// var fullName = "salve";
+// var myLName = "salve";
 
-// console.log(myName-fullName);
+// console.log(myName-myLName);
 
 //check true false using NaN
 
@@ -114,8 +114,8 @@
 
 //do while loop
 
-// var no = 20;
 
+// var no = 20;
 // do {
 //     debugger;
 //   console.log(no);
@@ -174,7 +174,7 @@
 
 // Array
 
-//const arr=[2,4,20,15,25] i have this arr want to insert value30 inbetween 15 and 25 in 
+//const arr=[2,4,20,15,25] i have this arr want to insert value30 inbetween 15 and 25 in
 
 // const arr = [2, 4, 20, 15, 25];
 
@@ -186,8 +186,7 @@
 
 // console.log(arr); // [2, 4, 20, 15, 30, 25]
 
-
-// //const arr=[2,4,20,15,25] i have this arr want to insert value 1 at starting position 
+// //const arr=[2,4,20,15,25] i have this arr want to insert value 1 at starting position
 
 // const arr1 = [2, 4, 20, 15, 25];
 
@@ -287,7 +286,6 @@
 // }else{
 //     console.log("no record found...")
 // }
-
 
 // const month=['jan', 'feb', 'march','April','jun','july']
 
@@ -504,7 +502,7 @@
 // console.log(res)
 
 // var str= "Pawan Vasant Salve From AhmedNagar";
-// let res= str.slice(0,30);
+// let res= str.slice(10);
 // console.log(res)
 
 //substring()
@@ -973,8 +971,6 @@
 // const secondMostOccurring = secondMostOccurringChar(str);
 // console.log(secondMostOccurring);
 
-
-
 // interview Question*********************++++++++++++=================>>>>>>>>>>>>***********
 
 // https://jsonplaceholder.typicode.com/users  i have this api want to display id 5 record only username, lat and lang
@@ -1009,7 +1005,6 @@
 
 // +++++======>>>> through the Axios  display id 5 record only username, lat and lang
 
-
 // import React, { useEffect, useState } from 'react';
 // import axios from 'axios';
 
@@ -1043,8 +1038,6 @@
 
 // export default UserRecord;
 
-
-
 // ++++++++======================+++++++++++++++++++++++++
 
 // find unique values
@@ -1055,18 +1048,252 @@
 
 // console.log(uniqueValues);
 
+// console.log(10 + "20");
+
+// console.log(9 -"5");
+
+// console.log(9 +"5");
+
+// console.log(" " + 0);
+
+// console.log("Pawan " + "Salve");
+
+// console.log(true + true );
+
+// console.log(true + false );
+
+// console.log(false + true );
+
+// console.log(false - true );
+
+// Leap Year program
+// var yr = 2020;
+// if (yr % 4 === 0) {
+//   if (yr % 100 === 0) {
+//     if (yr % 400 === 0) {
+//       console.log("it's leap year");
+//     } else {
+//       console.log("Not Leap");
+//     }
+//   } else {
+//     console.log("It's leap year");
+//   }
+// } else {
+//   console.log("no leap");
+// }
+
+// table of 8 both way
+
+// var no =8
+
+// for(var i=1; i<=10; i++ ){
+//     var num = no * i;
+//     console.log(num);
+// }
+
+// for (var no=1; no <= 10; no++){
+//     var num= 8;
+//     console.log(num + " * " + no +" = " + num * no);
+// }
+
+// Anonymus function
+
+// var myName= function (a,b){
+//     return total= a+ b;
+// }
+// console.log(myName(10,22));
+
+// Array in JavaScript
+
+// display last element in an array
+
+// in string
+
+// var arr = [
+//   "naveen",
+//   "praveen",
+//   "tulsidas",
+//   "Rock",
+//   "morningstart",
+//   "herculess",
+// ];
+// console.log(arr[arr.length-1]);
+
+// display last element in an array
+//In Numbers
+// var newArr = [10, 22, 44, 54, 2, 7, 44, 6];
+
+// console.log(newArr[newArr.length - 1]);
+
+// Dispaly Array element in string using for of loop
+
+// var arr = [
+//   "naveen",
+//   "praveen",
+//   "tulsidas",
+//   "Rock",
+//   "morningstart",
+//   "herculess",
+// ];
+
+// for(let element of arr){
+//     console.log(element);
+// }
+
+// Dispaly Array element index in string array using for in loop
+
+// var arr = [
+//   "naveen",
+//   "praveen",
+//   "tulsidas",
+//   "Rock",
+//   "morningstart",
+//   "herculess",
+// ];
+
+// for(let element in arr){
+//     console.log(element);
+// }
+
+
+// const arr=[10,15,20,30,35,40,45,50]
+
+// // arr.push(22)
+// const newInd=arr.indexOf(30)
+// arr.splice(newInd,Infinity)
+// // const indexArr=arr.indexOf(20)
+
+// // arr.splice(indexArr + 1, 0, 25)
+
+// console.log(arr);
 
 
 
+// let arr =[10,20,32,73,45]
+
+// let sum=arr.reduce((curEle,accu)=>{
+//     return curEle
+// })
+// console.log(arr);
+// console.log(sum);
+
+//setFTimeout program
+
+// setTimeout(()=>{
+//     console.log("myname");
+// },2000)
+
+//setInterval program
+
+// let no = 0;
+
+// function demoMy(){
+//     setInterval(()=>{
+//         no++;
+//         console.log(no);
+//     },1000)
+// }
+
+// demoMy();
+
+// duplicate value of an array
+// const arr1=['pawan','salve','rahul','Gautam','Morning','rahul','pawan']
+
+// const newArr= [...new Set(arr1)]
+// console.log(newArr);
 
 
+// duplicate value of an array of object
+
+// let arr =[{name:"now"},{name:"now"},{name:"work"},{name:"work"},{name:"now"},{name:"now"}];
+
+// let uniqueValues = [...new Set(arr.map(item => item.name))];
+
+// console.log(uniqueValues);
 
 
+//Array Destructuring in javascript
+
+// const arrData=["pawan", 'Salve','26']
+
+// let [myName,myLname,myAge,phone=83293027564]=arrData
+
+// console.log(phone);
+
+//object Destructuring in javasecript
+
+// const arrData={
+//     myName:'pawan',
+//     myAge:25,
+//     myPhone:856343826
+// }
+
+// let {myName,myPhone,myAge,myIFSC="83FACRAT7564"}=arrData
+
+// console.log(myIFSC);
 
 
+// +++++++++++++++++++++===================++++++++++++++++++++++++++
+// new Javascript programs  display record are age wise 20, 21
+/* Group items on the basis of age of given array of object */
+// const people = [
+// 	{ name: "John", age: 21 },
+//   { name: "Max", age: 20 },
+//   { name: "Alexa", age: 20 }
+// ];
+
+// const groupBy = (arr) => {
+// const result ={};
+// 	for (let i=0; i<arr.length; i++){
+//   const item= arr[i];
+//   const age= item.age.toString();
+//   if(!result[age]){
+//   result[age]=[];
+//   }
+//   result[age].push(item)
+//   }
+//   return result;
+//   };
+ 
+
+// console.log(groupBy(people)); 
+// Output
+/* 
+{
+	'20': [ { name: "Max", age: 20 }, { name: "Alexa", age: 20 } ],
+  '21': [ { name: "John", age: 21 } ]
+}
+ */
 
 
+// =================================================+++++++++++++++++++++++++++++++++++=====================================
 
-
-
-
+// const isValid = (str) => {
+//     const string = str.split('')
+//     const array = []
+    
+//     for (let i = 0; i < string.length; i++) {
+//       let item = string[i]
+      
+//       if (item === '(' || item === '[' || item === '{') {
+//         array.push(item)
+//       } else if (item === ')' || item === ']' || item === '}') {
+//         let check = array.pop()
+        
+//         if ((item === ')' && check !== '(') || 
+//             (item === ']' && check !== '[') || 
+//             (item === '}' && check !== '{')) {
+//           return false
+//         }
+//       }
+//     }
+    
+//     return array.length === 0
+//   }
+  
+//   const str1 = "({} [] ({}))";
+//   const str2 = "}}";
+  
+//   console.log(isValid(str1)); // Should return true
+//   console.log(isValid(str2)); // Should return false
+  
