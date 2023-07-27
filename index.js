@@ -130,7 +130,7 @@
 // }
 
 for (var no = 1; no <= 10; no++) {
-  var tablenum = 8;
+  var tablenum = 9;
   console.log(tablenum + "*" + no + "=" + tablenum * no);
 }
 
