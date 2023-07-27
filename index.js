@@ -129,10 +129,10 @@
 //   console.log(mult * no);
 // }
 
-// for (var no = 1; no <= 10; no++) {
-//   var tablenum = 8;
-//   console.log(tablenum + "*" + no + "=" + tablenum * no);
-// }
+for (var no = 1; no <= 10; no++) {
+  var tablenum = 8;
+  console.log(tablenum + "*" + no + "=" + tablenum * no);
+}
 
 /*********** Function Definition,calling,parameter,arguments,expressions, and function Anonymous**************/
 
@@ -163,7 +163,7 @@
 
 // console.log(funExp(10,20));// we can use this line directly for print without using above 2 lines
 
-/*********** EcmaScript  **************/
+/*********** EcmaScript Array Methods  **************/
 
 //Arrow Function
 
@@ -302,7 +302,7 @@
 // // 4.
 // const indexOfMonth =months.indexOf('jun');
 // if(indexOfMonth != -1){
-//     const updateMonth=months.splice(indexOfMonth,1)
+//     const updateMonth=months.splice(indexOfMonth,1)//remove element
 //     console.log(months)
 //     console.log(updateMonth)
 // }else{
@@ -379,7 +379,7 @@
 /*-------------------//////////////////////------------------------*/
 
 // show here id 3 record
-// let GroupedData = [
+// let GroupData = [
 //     {
 //     "id" : 1,
 //     "country" : "UAE"
@@ -402,7 +402,7 @@
 //   }
 //   ];
 
-//   const record = GroupedData.find(data=> data.id ===3)
+//   const record = GroupData.find(data=> data.id ===3)
 //   console.log(record);
 
 //React add one more property
@@ -426,6 +426,15 @@
 // const arr=[10,20,110,2,4,3]
 // const minNo=Math.min(...arr);
 // console.log(minNo);
+
+// Second Logic
+
+// let arrayy = [2, 3, 4, 54, 34];
+// let minimum = arrayy.reduce((min, current) => {
+//   return current < min ? current : min;
+// });
+
+// console.log(minimum);
 
 //convert 2d array and 3d array into 1d array
 
@@ -482,7 +491,7 @@
 // }
 // console.log(result);
 
-/*********** Strings in JavaScript  **************/
+/*********** Strings  Methods in JavaScript  **************/
 
 //find string in a string
 
@@ -668,7 +677,7 @@
 //calculator is a higher order function
 
 //CallBack Function
-//function which get passed as an argument to another function is called CBF
+//function which passed as an argument to another function is called CBF
 
 // const sub =(a,b)=>{
 //     return a-b;
@@ -829,7 +838,7 @@
 
 // console.log(frequency);
 
-// count of each character of a srting in javascript without using function
+// display count of each character of a srting in javascript without using function
 // const str = "pawan salve pawan vasant salve";
 
 // // Create an object to store the character counts
@@ -923,7 +932,7 @@
 //   console.log("The strings are different");
 // }
 
-// print most use character in this string
+// print most occurance character in the given string
 // function secondWord(str1) {
 //   const words = str1.split("");
 //   const seaprate = {};
@@ -931,12 +940,10 @@
 //     const word = words[i];
 //     seaprate[word] = (seaprate[word] || 0) + 1;
 //   }
-
 //   let count = -1;
 //   let largeCount = -1;
 //   let wordMax = "";
 //   let largeWordmax = "";
-
 //   for (let word in seaprate) {
 //     const allCount = seaprate[word];
 //     if (allCount > count) {
@@ -979,7 +986,7 @@
 
 // import { useState, useEffect } from "react";
 
-// function User() {
+// export default function User() {
 //   const [user, setUser] = useState(null);
 
 //   useEffect(() => {
@@ -1002,6 +1009,7 @@
 //     </div>
 //   );
 // }
+
 
 // +++++======>>>> through the Axios  display id 5 record only username, lat and lang
 
@@ -1202,6 +1210,56 @@
 // const newArr= [...new Set(arr1)]
 // console.log(newArr);
 
+//To display the values that do not repeat in the arrays,
+
+// const newArr = [
+//   {
+//     name: 'Pawan',
+//     age: 25,
+//   },
+//   {
+//     name: 'Pravin',
+//     age: 26,
+//   },
+//   {
+//     name: 'Shiva',
+//     age: 24,
+//   },
+// ];
+
+// const newArr1 = [
+//   {
+//     name: 'Pramod',
+//     age: 25,
+//   },
+//   {
+//     name: 'Pravin',
+//     age: 26,
+//   },
+//   {
+//     name: 'Shiva',
+//     age: 24,
+//   },
+// ];
+
+// const mergedArr = [];
+
+// newArr.forEach(obj => {
+//   const exists = mergedArr.some(item => item.name === obj.name && item.age === obj.age);
+//   if (!exists) {
+//     mergedArr.push(obj);
+//   }
+// });
+
+// newArr1.forEach(obj => {
+//   const exists = mergedArr.some(item => item.name === obj.name && item.age === obj.age);
+//   if (!exists) {
+//     mergedArr.push(obj);
+//   }
+// });
+
+// console.log(mergedArr);
+
 
 // duplicate value of an array of object
 
@@ -1231,7 +1289,6 @@
 // let {myName,myPhone,myAge,myIFSC="83FACRAT7564"}=arrData
 
 // console.log(myIFSC);
-
 
 // +++++++++++++++++++++===================++++++++++++++++++++++++++
 // new Javascript programs  display record are age wise 20, 21
@@ -1267,7 +1324,7 @@
 
 
 // =================================================+++++++++++++++++++++++++++++++++++=====================================
-
+/* Program to check a string with balanced brackets. */
 // const isValid = (str) => {
 //     const string = str.split('')
 //     const array = []
@@ -1297,3 +1354,673 @@
 //   console.log(isValid(str1)); // Should return true
 //   console.log(isValid(str2)); // Should return false
   
+// \\\\\**************************************\\\\\\\\\
+
+// call api and display record in table format using fetch
+
+// import React, { useEffect, useState } from 'react';
+
+// const TodoComponent = () => {
+//   const [todos, setTodos] = useState([]);
+
+//   useEffect(() => {
+//     fetchData();
+//   }, []);
+
+//   const fetchData = () => {
+//     fetch('https://jsonplaceholder.typicode.com/todos')
+//       .then(response => response.json())
+//       .then(json => setTodos(json))
+//       .catch(error => console.log(error));
+//   };
+
+//   return (
+//     <div>
+//       <h2>Todo Component</h2>
+      
+//         <table>
+//           <thead>
+//             <tr>
+//               <th>Title</th>
+//               <th>ID</th>
+//               <th>User ID</th>
+//             </tr>
+//           </thead>
+//           <tbody>
+//             {todos.map(todo => (
+//               <tr key={todo.id}>
+//                 <td>{todo.title}</td>
+//                 <td>{todo.id}</td>
+//                 <td>{todo.userId}</td>
+//               </tr>
+//             ))}
+//           </tbody>
+//         </table>
+     
+//     </div>
+//   );
+// };
+
+// export default TodoComponent;
+
+// ***************************************========================***************************
+
+// call api and display record as simple using fetch method
+
+// import React, { useEffect, useState } from 'react';
+
+// const TodoComponent = () => {
+//   const [todo, setTodo] = useState(null);
+//   useEffect(() => {
+//     fetchData();
+//   }, []);
+
+//   const fetchData = () => {
+// fetch('https://jsonplaceholder.typicode.com/todos/1')
+// .then(response => response.json())
+// .then(json=> setTodo(json))
+//   };
+
+//   return (
+//     <div>
+//       <h2>Todo Component</h2>
+//       {todo ? 
+//         <div>
+//           <h3>Title: {todo.title}</h3>
+//           <p>ID: {todo.id}</p>
+//           <p>User ID: {todo.userId}</p>
+//         </div>
+//         : <h3>Pending... </h3>
+// }
+//     </div>
+//   );
+// };
+
+// export default TodoComponent;
+
+
+// {
+//   todo.map(item=>(
+//     <h2>{item.id}</h2>
+//   )
+//   )
+// }
+
+// /++++++++++++++++++++++++++++++++++++++++++++++++=+===============/
+
+// Pass data from parent to child
+
+// export default function App() {
+//   const data="Pawan"
+//   return (
+//     <div className="App">
+//       <h1>Hello CodeSandbox</h1>
+//       <NewData comp={data}/>
+//       <h2>Start editing to see some magic happen!</h2>
+//     </div>
+//   );
+  
+// }
+// const NewData =(props)=>{
+//   return(
+//     <div>{props.comp} </div>
+//   )
+// }
+
+
+/*++++++++++++++++++++++++++++++++++++++++==========================================*/
+// You have 15 Rs with you. You go to a shop and shopkeeper tells you price as 1 Rs per chocolate. He also tells you that you can get a chocolate in return of 3 wrappers.
+//  How many maximum chocolates you can eat/get?
+// function calculateMaxChocolates(money) {
+//   let chocolates = money; // Number of chocolates initially purchased
+//   let wrappers = chocolates; // Number of wrappers initially obtained
+
+//   while (wrappers >= 3) {
+//     const exchangedChocolates = Math.floor(wrappers / 3); // Chocolates obtained from exchanging wrappers
+//     chocolates += exchangedChocolates;
+//     wrappers = exchangedChocolates + (wrappers % 3); // Wrappers remaining after exchanging
+//   }
+
+//   return chocolates;
+// }
+
+// const money = 15;
+// const maxChocolates = calculateMaxChocolates(money);
+
+// console.log(`Maximum number of chocolates: ${maxChocolates}`);
+
+
+//Prime number program
+
+// var no=20;
+// var b=1
+// for (let i=2; i<=Math.sqrt(no); i++)
+// {
+//   if(no % i == 0)
+//   {
+//     b=2;
+//     break;
+//   }
+//   if(b== 2)
+// {
+//   console.log("no is NOT Prime");
+// }
+// else{
+//   log("the given number is PRIME ")
+// }
+// }
+
+
+// Fibbonacci series program
+// const number = parseInt(prompt('Enter the number of terms: '));
+// let number=10
+// let a = 0, b = 1, c;
+// for (let i = 1; i <= number; i++) {
+//     console.log(a);
+//     c = a + b;
+//     a = b;
+//     b = c;
+// }
+
+
+// Write Javascript code!
+// You have 15 Rs with you. You go to a shop and shopkeeper tells you price as 1 Rs per chocolate. He also tells you that you can get a chocolate in return of 3 wrappers. How many maximum chocolates you can eat/get?
+
+// You have a 5-liter and a 3-liter bowls.  You have access to empty of water. How would you measure exactly 4 liters in another empty Jar
+
+// A water lily in a lake double in size every day. After 10 days, it covers half of the lake. How many days will it have taken in all to cover it entirely
+
+
+
+// Write Javascript code!
+
+// Write a function in Vanilla JS that takes n number of arrays of integers and returns an array of distinct integers 
+// i.e the integers should appear only once among the input arrays. 
+// Example:I/P [1,2,3], [2,3,4], [3,4,5] => O/P [1,2,3,4,5]. 
+// Note: number of arrays can be n. The function should work when inputs are increased or decreased.
+// Two way of writing 1st is using [...new Set()]
+// function dipayNumber(...arrays) {
+//   const no1 = arrays.flat();
+
+//   var retAns =[ ...new Set(no1)];
+//   console.log(retAns);
+// }
+
+// dipayNumber([1, 2, 3], [2, 3, 4], [3, 4, 5]);
+
+// Two way of writing 2nd is using const no2= Array.form(retAns)
+// function dipayNumber(...arrays) {
+//   const no1 = arrays.flat(Infinity);
+
+//   var retAns =new Set(no1);
+//   const no2 = Array.from(retAns);
+
+//   console.log(no2);
+// }
+
+// dipayNumber([1, 2, 3], [2, 3, 4], [3, 4, 5]);
+
+//Trird way using reduce() and concate ()
+
+// function dipayNumber(...arrays) {
+//   const no1 = arrays.reduce((acc, curr) => acc.concat(curr), []);
+
+//   var retAns = new Set(no1);
+//   const no2 = Array.from(retAns);
+ 
+//     console.log(no2);
+  
+// }
+
+// dipayNumber([1, 2, 3], [2, 3, 4], [3, 4, 5]);
+// ===============================***************************==============================
+// simple JavaScript program that defines an array of objects and displays the records:
+
+// Define an array of objects
+// const students = [
+//   { name: 'John', age: 20, grade: 'A' },
+//   { name: 'Sarah', age: 22, grade: 'B' },
+//   { name: 'Michael', age: 19, grade: 'A-' },
+// ];
+
+// // Loop through each object in the array
+// for (let i = 0; i < students.length; i++) {
+//   // Access the properties of the current object
+//   const name = students[i].name;
+//   const age = students[i].age;
+//   const grade = students[i].grade;
+
+//   // Display the values
+//   console.log(`Name: ${name}, Age: ${age}, Grade: ${grade}`);
+// }
+
+
+
+// Auto Increment counter program in React Js
+
+// import React, { useState, useEffect } from 'react';
+
+// const AutoCounter = () => {
+//   const [count, setCount] = useState(0);
+
+//   useEffect(() => {
+//     setTimeout(() => {
+//       setCount(prevCount => prevCount + 1);
+//     }, 1000);
+//   },);
+
+//   return (
+//     <div>
+//       <h1>Auto Counter</h1>
+//       <p>Count: {count}</p>
+//     </div>
+//   );
+// };
+
+// export default AutoCounter;
+
+
+// Counter Start Stop Program 
+
+// import React, { useState, useEffect } from 'react';
+
+// const Counter = () => {
+//   const [count, setCount] = useState(0);
+//   const [isRunning, setIsRunning] = useState(false);
+
+//   useEffect(() => {
+//     let timerId;
+
+//     if (isRunning) {
+//       timerId = setInterval(() => {
+//         setCount((prevCount) => prevCount + 1);
+//       }, 1000);
+//     }
+
+//     return () => {
+//       clearInterval(timerId);
+//     };
+//   }, [isRunning]);
+
+//   const handleStart = () => {
+//     setIsRunning(true);
+//   };
+
+//   const handleStop = () => {
+//     setIsRunning(false);
+//   };
+
+//   return (
+//     <div>
+//       <h1>Counter: {count}</h1>
+//       <button onClick={handleStart}>Start</button>
+//       <button onClick={handleStop}>Stop</button>
+//     </div>
+//   );
+// };
+
+// export default Counter;
+
+// onClick of Submit button display first name and last name
+
+// import React, { useState } from "react";
+// export default function App() {
+//   const [fname, setFname] = useState("");
+//   const [lname, setLname] = useState("");
+
+//   const handlClick = async () => {
+//     const response = await fetch("https://randomuser.me/api/");
+//     const data = await response.json();
+//     const { results } = data;
+//     if (results.length > 0) {
+//       const { name } = results[0];
+//       setFname(name.first);
+//       setLname(name.last);
+//     }
+//   };
+//   return (
+//     <div className="App">
+//       <h2>Start editing to see some magic happen!</h2>
+//       <button onClick={handlClick}>Click</button>
+//       <p>
+//         {fname} {lname}
+//       </p>
+//     </div>
+//   );
+// }
+
+// ==================================***********************===================================
+// https://fakestoreapi.com/products use this API and display recorde as list View
+
+// import React, { useState, useEffect } from 'react';
+
+// const ProductList = () => {
+//   const [products, setProducts] = useState([]);
+
+//   useEffect(() => {
+//     fetch('https://fakestoreapi.com/products')
+//       .then((response) => response.json())
+//       .then((data) => setProducts(data))
+//       .catch((error) => console.log(error));
+//   }, []);
+
+//   return (
+//     <div>
+//       <h1>Product List</h1>
+//       <ul>
+//         {products.map((product) => (
+//           <li key={product.id}>
+//             <h2>{product.title}</h2>
+//             <p>{product.description}</p>
+//             <p>Price: ${product.price}</p>
+//             <img src={product.image} alt={product.title} />
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// };
+
+// export default ProductList;
+
+// =======================================********************************=================================
+
+// import React, { useState, useEffect } from 'react';
+
+// function ProductList() {
+//   const [products, setProducts] = useState([]);
+
+//   useEffect(() => {
+//     fetch('https://dummyjson.com/products')
+//       .then((response) => response.json())
+//       .then((data) => {
+//         // console.log(data)
+//         setProducts(data?.products)
+//       } 
+//       )
+//   }, []);
+
+//   return (
+//     <div>
+//       <ul>
+//         {products.map((product) => (
+//           <li key={product.id}>
+//             {product.brand} - {product.price}
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
+
+// export default ProductList;
+// ============================***************===========================
+// https://fakestoreapi.com/products -use this API add new record and display recorde as list View
+
+// import React, { useState, useEffect } from 'react';
+
+// function ProductList() {
+//   const [products, setProducts] = useState([]);
+//   const [newProduct, setNewProduct] = useState({
+//     brand: '',
+//     price: '',
+//   });
+
+//   useEffect(() => {
+//     fetch('https://dummyjson.com/products')
+//       .then((response) => response.json())
+//       .then((data) => {
+//         setProducts(data?.products);
+//       })
+//       .catch((error) => console.log(error));
+//   }, []);
+
+//   const handleInputChange = (e) => {
+//     setNewProduct({
+//       ...newProduct,
+//       [e.target.name]: e.target.value,
+//     });
+//   };
+
+//   const handleAddProduct = () => {
+//     setProducts([...products, newProduct]);
+//     setNewProduct({
+//       brand: '',
+//       price: '',
+//     });
+//   };
+
+//   return (
+//     <div>
+//       <ul>
+//         {products.map((product) => (
+//           <li key={product.id}>
+//             {product.brand} - {product.price}
+//           </li>
+//         ))}
+//       </ul>
+
+//       <div>
+//         <input
+//           type="text"
+//           name="brand"
+//           placeholder="Brand"
+//           value={newProduct.brand}
+//           onChange={handleInputChange}
+//         />
+//         <input
+//           type="text"
+//           name="price"
+//           placeholder="Price"
+//           value={newProduct.price}
+//           onChange={handleInputChange}
+//         />
+//         <button onClick={handleAddProduct}>Add Product</button>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default ProductList;
+
+
+// =========================================***********====================
+// https://fakestoreapi.com/products -use this API add new record 
+// and display recorde as list View Using form
+
+// import React, { useState, useEffect } from 'react';
+// import './style.css';
+
+// export default function App() {
+//   const [products, setProducts] = useState([]);
+//   const [newProduct, setNewProduct] = useState({
+//     brand: '',
+//     price: '',
+//   });
+
+//   useEffect(() => {
+//     fetch('https://dummyjson.com/products')
+//       .then((res) => res.json())
+//       .then((result) => {
+//         console.log(result);
+//         setProducts(result?.products);
+//       });
+//   }, []);
+
+//   const inputChangeHandler = (e) => {
+//     setNewProduct({
+//       ...newProduct,
+//       [e.target.name]: e.target.value,
+//     });
+//   };
+
+//   const submitHandle = (e) => {
+//     e.preventDefault(); // Prevents the default form submission behavior
+
+//     setProducts([...products, newProduct]);
+//     setNewProduct({
+//       brand: '',
+//       price: '',
+//     });
+//   };
+
+//   return (
+//     <>
+//       <div>
+//         <h1>Hello StackBlitz!</h1>
+//         <ul>
+//           {products?.map((item, index) => (
+//             <li key={index}>
+//               <p>{item.brand}</p>
+//               <p>{item.price}</p>
+//             </li>
+//           ))}
+//         </ul>
+//       </div>
+
+//       <h1>Add New Data</h1>
+
+//       <form onSubmit={submitHandle}>
+//         <input
+//           name="brand"
+//           type="text"
+//           value={newProduct.brand}
+//           onChange={inputChangeHandler}
+//           placeholder="Enter brand name"
+//         />
+//         <br />
+//         <br />
+//         <input
+//           name="price"
+//           type="text"
+//           value={newProduct.price}
+//           onChange={inputChangeHandler}
+//           placeholder="Enter price name"
+//         />
+//         <br />
+//         <br />
+//         <button type="submit">Submit</button>
+//       </form>
+//     </>
+//   );
+// }
+
+// ===================================******************=========================================
+
+// https://dummyjson.com/products -use this API Link and display record - 
+
+// import React, { useState, useEffect } from 'react';
+
+// function ProductList() {
+//   const [products, setProducts] = useState([]);
+
+//   useEffect(() => {
+//     fetch('https://dummyjson.com/products')
+//       .then((response) => response.json())
+//       .then((data) => 
+//       setProducts(data?.products)
+//       )
+//   }, []);
+  
+//   return (
+//     <div>
+//       <ul>
+//         {products?.map((product) => (
+//           <li key={product.id}>
+//             <p>{product.id} </p>
+//             <p>{product.title}</p>
+//             <p>{product.price}</p>
+//             <img src={product.image} alt={product.title} />
+
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//   );
+// }
+
+// export default ProductList;
+
+
+
+// var number = 10;
+// var display = function () {
+//   console.log(number);
+//   var number = 20;
+// };
+// display();
+
+// for (var i = 0; i < 5; i++) {
+//   setTimeout(function() { console.log(i); }, i * 1000 );
+// }
+
+
+// let listOfNumber = [6,1,2,8,3,4,7,10,5] i have this array 1 to 10 write a code to find missing number
+// To find the missing number in the given array, 
+
+// const listOfNumbers = [6, 1, 2, 8, 3, 4, 7, 10, 5];
+// const n = listOfNumbers.length + 1; // n is the expected length of the array, including the missing number
+
+// // Calculate the sum of numbers from 1 to n
+// const expectedSum = (n * (n + 1)) / 2;
+// // Calculate the actual sum of the numbers in the array
+// const actualSum = listOfNumbers.reduce((sum, num) => sum + num, 0);
+// // Find the missing number by subtracting the actual sum from the expected sum
+// const missingNumber = expectedSum - actualSum;
+
+// console.log("Missing number:", missingNumber);
+
+
+
+
+
+
+/* new
+Practice 
+here*/
+// a=10
+// b=20
+
+// a=a+b;
+// b=a-b;
+// a=a-b
+
+// console.log(a,b);
+
+
+// const arr=[3,5,10,22,40]
+// const indArr=arr.indexOf(10)
+// arr.splice(indArr + 1, 0, 20)
+// console.log(arr);
+
+// const arr=[3,5,10,22,40]
+// arr.shift()
+// console.log(arr);
+
+
+// const nameArr=['kadam','Aasman','Air','Newton']
+
+// for(let jok in nameArr){
+//   console.log((jok));
+// }
+
+
+// const nameArr1=['kadam','Aasman','Air','Newton']
+
+// for(let jok of nameArr1){
+//   console.log((jok));
+// }
+
+// const nameArr2=['kadam','Aasman','Air','Newton']
+// nameArr2.forEach(array=>console.log(array));
+
+
+
+// let textname=" pawan salve"
+
+// let revstr=""
+// for(let i=textname.length-1; i>=0; i--)
+// {
+//   revstr +=textname[i]
+// }
+// console.log(revstr);
