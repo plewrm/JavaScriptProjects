@@ -1165,8 +1165,19 @@ for (var no = 1; no <= 10; no++) {
 
 
 // const arr=[10,15,20,30,35,40,45,50]
-
 // // arr.push(22)
+
+//insert a element in an array without chage a origional array
+
+// const arrayy=[2,4,22,3,43,221]
+
+// const newData= [...arrayy,493]
+
+// console.log(newData)
+// console.log(arrayy)
+
+
+
 // const newInd=arr.indexOf(30)
 // arr.splice(newInd,Infinity)
 // // const indexArr=arr.indexOf(20)
@@ -1619,7 +1630,7 @@ for (var no = 1; no <= 10; no++) {
 
 // export default AutoCounter;
 
-
+// ===============*************==========================================================
 // Counter Start Stop Program 
 
 // import React, { useState, useEffect } from 'react';
@@ -1724,6 +1735,7 @@ for (var no = 1; no <= 10; no++) {
 // export default ProductList;
 
 // =======================================********************************=================================
+// https://dummyjson.com/products use this API and display recorde as list View
 
 // import React, { useState, useEffect } from 'react';
 
