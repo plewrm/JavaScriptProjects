@@ -68,7 +68,7 @@
 
 // console.log(num1 == num2);
 
-//eg
+// eg
 // var num1 = 10;
 // var num2 ='10';
 
@@ -129,21 +129,21 @@
 //   console.log(mult * no);
 // }
 
-for (var no = 1; no <= 10; no++) {
-  var tablenum = 9;
-  console.log(tablenum + "*" + no + "=" + tablenum * no);
-}
+// for (var no = 1; no <= 10; no++) {
+//   var tablenum = 9;
+//   console.log(tablenum + "*" + no + "=" + tablenum * no);
+// }
 
 /*********** Function Definition,calling,parameter,arguments,expressions, and function Anonymous**************/
 
 //function Definition and parameter and calling and arguments
 
-// function sum(){
-//     var a=10,b=20;
-//     var total=a+b;
-//     console.log(total);
-// }
-// sum();
+function sum(){
+    var a=10,b=20;
+    var total=a+b;
+    console.log(total);
+}
+sum();
 
 // function sum(a,b)//function Parameters
 // {
@@ -174,7 +174,7 @@ for (var no = 1; no <= 10; no++) {
 
 // Array
 
-//const arr=[2,4,20,15,25] i have this arr want to insert value30 inbetween 15 and 25 in
+//const arr=[2,4,20,15,25] i have this arr want to insert value 30 inbetween 15 and 25 in
 
 // const arr = [2, 4, 20, 15, 25];
 
@@ -451,6 +451,23 @@ for (var no = 1; no <= 10; no++) {
 // })
 // console.log(flatArr)
 
+// =========================================
+//convert 2d array into 1d array
+
+
+// const arr1 =[
+//   [1,2,7],
+//   [3,4],
+//   [5,6],
+//   [7,8],
+//   [9,10],
+// ];
+
+// let flatArr= arr1.reduce((accum, curElm)=>{
+// return accum.concat(curElm)
+// })
+// console.log(flatArr)
+
 // Display greater number than 100
 
 // function findNumbersGreaterThan100(arr) {
@@ -468,6 +485,22 @@ for (var no = 1; no <= 10; no++) {
 
 //o/p- 110,200
 
+// ===========*********8Second logic using filter method***********=============
+
+// const numbers = [50, 110, 75, 200, 90];
+
+// const displayGreaterThan100 = (arr) => {
+//   return arr.filter(number => number > 100);
+// };
+
+// const result = displayGreaterThan100(numbers);
+// console.log(result); // Output: [110, 200]
+
+// ========================*****Using third logic without using function************==================
+// const numbers = [50, 110, 75, 200, 90];
+// let res=numbers.filter((no)=>no>100)
+// console.log(res)
+// ==========================**********************************=======================================
 // Display single value of an array are greater than 100 without using builtin functions
 
 // const arr = [100, 110, 101, 200, 321];
@@ -725,7 +758,7 @@ for (var no = 1; no <= 10; no++) {
 
 // "use strict"
 // let x= "pawan";
-// //  x= "pawan"; // without using "use strict" its display output wit using "use strict" its display error
+// //  x= "pawan"; // without using "use strict" its display output with using "use strict" its display error
 // console.log(x);
 
 // Syncronous and Asyncronous JavaScript
@@ -1164,7 +1197,7 @@ for (var no = 1; no <= 10; no++) {
 // }
 
 
-// const arr=[10,15,20,30,35,40,45,50]
+// const arr=[10,15,20,30,35,40,45,50]  
 // // arr.push(22)
 
 //insert a element in an array without chage a origional array
@@ -1523,10 +1556,11 @@ for (var no = 1; no <= 10; no++) {
 
 
 // Fibbonacci series program
-// const number = parseInt(prompt('Enter the number of terms: '));
 // let number=10
 // let a = 0, b = 1, c;
-// for (let i = 1; i <= number; i++) {
+// let res=a+b
+// console.log(res)
+// while(res < number) {
 //     console.log(a);
 //     c = a + b;
 //     a = b;
@@ -1576,10 +1610,13 @@ for (var no = 1; no <= 10; no++) {
 // function dipayNumber(...arrays) {
 //   const no1 = arrays.reduce((acc, curr) => acc.concat(curr), []);
 
-//   var retAns = new Set(no1);
-//   const no2 = Array.from(retAns);
+//   var retAns = [...new Set(no1)];
+
+//   // var retAns = new Set(no1); these three line also use for array allten
+//   // const no2 = Array.from(retAns); 
+//   // console.log(no2);
  
-//     console.log(no2);
+//     console.log(retAns);
   
 // }
 
@@ -1672,6 +1709,58 @@ for (var no = 1; no <= 10; no++) {
 
 // export default Counter;
 
+// start stop count program forword backword order
+// import React, { useState, useEffect } from 'react';
+// import './style.css';
+
+// export default function App() {
+//   const [count, setCount] = useState(0);
+//   const [isRunning, setIsRunning] = useState(false);
+//   const [isIncrementing, setIsIncrementing] = useState(true);
+
+//   useEffect(() => {
+//     let timerId;
+
+//     const incrementCount = () => {
+//       setCount((prevCnt) => (isIncrementing ? prevCnt + 1 : prevCnt - 1));
+//     };
+
+//     if (isRunning) {
+//       timerId = setInterval(() => {
+//         incrementCount();
+
+//         if (count ===4) {
+//           setIsIncrementing(false);
+//         } else if (count === 1) {
+//           setIsIncrementing(true);
+//         }
+//       }, 1000);
+//     }
+
+//     return () => {
+//       clearInterval(timerId);
+//     };
+//   }, [isRunning, count, isIncrementing]);
+
+//   const startTime = () => {
+//     setIsRunning(true);
+//   };
+
+//   const stopTime = () => {
+//     setIsRunning(false);
+//   };
+
+//   return (
+//     <div>
+//       <h1>Hello StackBlitz!</h1>
+//       <h2>{count}</h2>
+//       <button onClick={startTime}>Start</button>&nbsp;
+//       <button onClick={stopTime}>Stop</button>&nbsp;
+//     </div>
+//   );
+// }
+
+
 // onClick of Submit button display first name and last name
 
 // import React, { useState } from "react";
@@ -1750,7 +1839,7 @@ for (var no = 1; no <= 10; no++) {
 //         setProducts(data?.products)
 //       } 
 //       )
-//   }, []);
+//   }, []);t
 
 //   return (
 //     <div>
@@ -1926,13 +2015,13 @@ for (var no = 1; no <= 10; no++) {
 // function ProductList() {
 //   const [products, setProducts] = useState([]);
 
-//   useEffect(() => {
-//     fetch('https://dummyjson.com/products')
-//       .then((response) => response.json())
-//       .then((data) => 
-//       setProducts(data?.products)
-//       )
-//   }, []);
+  // useEffect(() => {
+  //   fetch('https://dummyjson.com/products')
+  //     .then((response) => response.json())
+  //     .then((data) => 
+  //     setProducts(data?.products)
+  //     )
+  // }, []);
   
 //   return (
 //     <div>
@@ -1942,7 +2031,7 @@ for (var no = 1; no <= 10; no++) {
 //             <p>{product.id} </p>
 //             <p>{product.title}</p>
 //             <p>{product.price}</p>
-//             <img src={product.image} alt={product.title} />
+//             <img src={product.images[0]} alt={product.title} />
 
 //           </li>
 //         ))}
@@ -1970,17 +2059,21 @@ for (var no = 1; no <= 10; no++) {
 // let listOfNumber = [6,1,2,8,3,4,7,10,5] i have this array 1 to 10 write a code to find missing number
 // To find the missing number in the given array, 
 
-// const listOfNumbers = [6, 1, 2, 8, 3, 4, 7, 10, 5];
-// const n = listOfNumbers.length + 1; // n is the expected length of the array, including the missing number
+// function missnum(arr){
+//   let result=[];
+//   let minArr=Math.min(...arr)
+//   let maxArr=Math.max(...arr)
+//   for(let i=minArr; i<maxArr; i++){
+//       if(arr.indexOf(i)<0){
+//           result.push(i)
+//       }
+//   }
+//   return result
+// }
 
-// // Calculate the sum of numbers from 1 to n
-// const expectedSum = (n * (n + 1)) / 2;
-// // Calculate the actual sum of the numbers in the array
-// const actualSum = listOfNumbers.reduce((sum, num) => sum + num, 0);
-// // Find the missing number by subtracting the actual sum from the expected sum
-// const missingNumber = expectedSum - actualSum;
-
-// console.log("Missing number:", missingNumber);
+// const listOfNumber = [6,1,2,8,3,4,7,10,5]
+// const fstArr=missnum(listOfNumber)
+// console.log(fstArr)
 
 
 
@@ -2036,3 +2129,214 @@ here*/
 //   revstr +=textname[i]
 // }
 // console.log(revstr);
+
+//recent practice 9/25/2023
+
+// const arr = [2, 4, 20, 15, 25];
+
+// const newArr=arr.indexOf(15)
+
+// arr.splice(newArr+1,0,22)
+
+// console.log(arr);
+
+
+
+
+// let myPromise= new Promise((resolve, reject)=>{
+//   let a=30
+//   if(a===300){
+//     resolve("Success")
+//   }else{
+//     reject("not success")
+//   }
+// })
+// myPromise.then((message)=>{
+//   console.log("true result",message);
+// }).catch((message)=>{
+//   console.log("false result",message);
+// })
+
+
+// import React,{useState,useEffect} from 'react'
+// const ProductList =()=>{
+//   const [fname, setFName]=useState('')
+//   const [lname, setLName]=useState('')
+//   const handleClick = async()=>{
+// const resp=await fetch('https://randomuser.me/api/')
+// const data=resp.json()
+// const {results}=data
+// if(results.length>0){
+//   const {name}=results[0]
+//   setFName(name.first)
+//   setLName(name.last)
+// }
+//   }
+//   return(
+//     <div>
+// <button onClick={handleClick}>Ok</button>
+// <p>
+// {fname}- {lname}
+// </p>
+//     </div>
+//   )
+// }
+// export default ProductList
+
+
+
+// interview questions 
+// count character and display key value format
+// function countOccurrences(arr) {
+//   var result = {};
+  
+//   arr.forEach(function(element) {
+//     result[element] = (result[element] || 0) + 1;
+//   });
+  
+//   return result;
+// }
+
+// var myArr = [1, 2, 3, 2, 1, 3, 3, 2, 1, 1, 2, 3, 4, 4, 2, 3];
+// var output = countOccurrences(myArr);
+// console.log(output);
+
+// second way to count character and display key value format
+
+// var myArr = [1, 2, 3, 2, 1, 3, 3, 2, 1, 1, 2, 3, 4, 4, 2, 3];
+
+// // Initialize an empty object to store the counts
+// var countObj = { };
+
+// // Loop through the array and count occurrences
+// myArr.forEach(function (num) {
+//     if (countObj[num]) {
+//         countObj[num]++;
+//     } else {
+//         countObj[num] = 1;
+//     }
+// });
+
+// console.log(countObj);
+
+// Gess the output 
+// for (var a=0;a<3;a++){
+//   setTimeout(()=>{
+//       console.log(a)
+//   },a)
+// }
+
+//reverse number 123 to 321
+
+// var no=123
+
+// var res=String(no).split('').reverse().join('')
+// console.log(res)
+// o/p- 321
+
+// letter count display 
+
+// function letterCount(str, letter) {
+//   // Convert both the string and the letter to lowercase to make the comparison case-insensitive
+//   str = str.toLowerCase();
+//   letter = letter.toLowerCase();
+//   // Initialize a counter for the letter count
+//   let count = 0;
+//   // Loop through each character in the string
+//   for (let i = 0; i < str.length; i++) {
+//       // Check if the current character is equal to the specified letter
+//       if (str[i] === letter) {
+//           // Increment the count if there's a match
+//           count++;
+//       }
+//   }
+//   // Return the count
+//   return count;
+// }
+// // Example usage:
+// const result = letterCount("Connect", 'c');
+// console.log(result);  // Output: 2
+
+// ============================================================================================
+// interview logical question
+// There are two trains at a distance of 100 km. The trains are traveling towards each other with a speed of 40 km/hr and 50 km/hr respectively. A bee starts flying from the first train towards the second train with a speed of 60 km/hr. As soon as it reaches the second train, it starts flying back to the first train. It keeps on flying to and fro till the trains collide with each other. 
+// What is the total distance covered by the bee?
+
+//program solve question get image if i hover mouse on image then play video if i leave mouse then display image
+// import { useState, useEffect } from 'react';
+// import './App.css';
+
+// function App() {
+//   const [showVideo, setShowVideo] = useState(true);
+//   const handleMouseEnter = () => {
+//     setShowVideo(false);
+//   };
+//   const handleMouseLeave = () => {
+//     setShowVideo(true);
+//   };
+
+//   return (
+//     <div className="App">
+//       {showVideo ? (
+//         <img
+//           src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Big.Buck.Bunny.-.Opening.Screen.png/1200px-Big.Buck.Bunny.-.Opening.Screen.png"
+//           alt="Not Found"
+//           width="100%"
+//           onMouseEnter={handleMouseEnter}
+//         />
+//       ) : (
+//         <video
+//           width="360"
+//           height="315"
+//           controls
+//           autoPlay
+//           onMouseLeave={handleMouseLeave}
+//           src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+//           type="video/mp4"
+//         ></video>
+//       )}
+//     </div>
+//   );
+// }
+
+// export default App;
+
+// service paid more than 200 display
+
+// function countServicesPaidMoreThan200(servicesArray) {
+//   // Create an object to store the services and their total amounts
+//   const services = {};
+
+//   // Iterate through the servicesArray to calculate the total amounts for each service
+//   for (let i = 0; i < servicesArray.length; i++) {
+//     const [service, amount] = servicesArray[i];
+//     // Check if the service already exists in the services object
+//     if (services.hasOwnProperty(service)) {
+//       services[service] += amount;
+//     } else {
+//       services[service] = amount;
+//     }
+//   }
+
+//   let count = 0;
+
+//   // Iterate through the services object to count services with amounts more than 200
+//   for (const service in services) {
+//     if (services.hasOwnProperty(service) && services[service] >= 200) {
+//       count++;
+//     }
+//   }
+
+//   return count;
+// }
+
+// const servicesArray = [
+//   ["Sweeggy", 123],
+//   ["Sweeggy", 334],
+//   ["Zomato", 234],
+//   ["Dunzo", 546],
+//   ["Zomato", 102]
+// ];
+
+// console.log(countServicesPaidMoreThan200(servicesArray)); // Output: 3 (Sweeggy, Zomato, Dunzo)
+
