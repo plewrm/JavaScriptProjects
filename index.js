@@ -1,138 +1,138 @@
 /***********values and variables**************/
 
-// var myName = "Pawanssss";
-// var myCnt = 8329302612;
+var myName = "Pawanssss";
+var myCnt = 8329302612;
 
-// console.log(myName);
+console.log(myName);
 
 /*********** null and undefined? **************/
 // null//
 
-// var nameConst= null;
-// console.log(nameConst);
+var nameConst= null;
+console.log(nameConst);
 
 //undefined//
 
-// var nameConst;
+var nameConst;
 
-// console.log(nameConst);
+console.log(nameConst);
 
 /************ Check variable data type **************/
 
-// var nameConst= "Pawan";
-// console.log(typeof(nameConst));
+var nameConst= "Pawan";
+console.log(typeof(nameConst));
 
 /************ What is NaN? **************/
 
 // NaN is a property of global object and it is a variable in global ScriptProcessorNode.
 //The initial value of NaN is Not a Number
 
-// var myName = "pawan";
-// var myLName = "salve";
+var myName = "pawan";
+var myLName = "salve";
 
-// console.log(myName-myLName);
+console.log(myName-myLName);
 
 //check true false using NaN
 
-// var myName = "pawan";
+var myName = "pawan";
 
-// console.log(isNaN(myName));
+console.log(isNaN(myName));
 
 /************ Expression and operators  **************/
 
 //string concatination operator
-// console.log("pawan " + "Salve")
+console.log("pawan " + "Salve")
 
 //Exponential operator
-// console.log(3**3);
+console.log(3**3);
 
 // swap the two values without using third variable
-// a = 15;
-// b = 10;
+a = 15;
+b = 10;
 // output a=10; b=15;
 
-// a=a+b;
-// b=a-b;
-// a=a-b;
+a=a+b;
+b=a-b;
+a=a-b;
 
-// console.log("Value of a "+a);
-// console.log("Value of b"+b);
+console.log("Value of a "+a);
+console.log("Value of b"+b);
 
 /*********** What is Difference between == And === **************/
 
 /* -> == it's check only values and === it's check value as well as data type */
 
 //eg
-// var num1 = 10;
-// var num2 ='10';
+var num1 = 10;
+var num2 ='10';
 
-// console.log(num1 == num2);
+console.log(num1 == num2);
 
 // eg
-// var num1 = 10;
-// var num2 ='10';
+var num1 = 10;
+var num2 ='10';
 
-// console.log(num1 === num2);
+console.log(num1 === num2);
 
 /*********** Controle Statement and Loops **************/
 
 //Conditional (ternary) operator
 
-// var age = 20;
-// console.log(age >= 18 ? "Eligible" : "Not eligible");
+var age = 20;
+console.log(age >= 18 ? "Eligible" : "Not eligible");
 
 //Switch Statement
 
-// var area = "circle";
-// var PI = 3.142,
-//   l = 5,
-//   b = 4,
-//   r = 3;
+var area = "circle";
+var PI = 3.142,
+  l = 5,
+  b = 4,
+  r = 3;
 
-// switch (area) {
-//   case "circle":
-//     console.log("area of circle ==" + PI * r ** 2);
-//     break;
-//   case "trangle":
-//     console.log("area of circle ==" +(l*b)/2);
-//     break;
-//   case "rectangle":
-//     console.log("area of circle ==" + (l*b));
-//     break;
-//     default:
-//     console.log("please enter valid information" );
+switch (area) {
+  case "circle":
+    console.log("area of circle ==" + PI * r ** 2);
+    break;
+  case "trangle":
+    console.log("area of circle ==" +(l*b)/2);
+    break;
+  case "rectangle":
+    console.log("area of circle ==" + (l*b));
+    break;
+    default:
+    console.log("please enter valid information" );
 
-// }
+}
 
-// While Loop
-// var no = 1;
+/*While Loop */
+var no = 1;
 
-// while (no <= 10) {
-//   console.log(no);
-//   no++;
-// }
+while (no <= 10) {
+  console.log(no);
+  no++;
+}
 
 //do while loop
 
 
-// var no = 20;
-// do {
-//     debugger;
-//   console.log(no);
-//   no++;
-// } while (no <= 10);
+var no = 20;
+do {
+    debugger;
+  console.log(no);
+  no++;
+} while (no <= 10);
 
 // For loop
 
-// for (var no = 1; no <= 10; no++) {
-//   var mult = 8;
-//   console.log(mult * no);
-// }
+for (var no = 1; no <= 10; no++) {
+  var mult = 8;
+  console.log(mult * no);
+}
 
-// for (var no = 1; no <= 10; no++) {
-//   var tablenum = 9;
-//   console.log(tablenum + "*" + no + "=" + tablenum * no);
-// }
+for (var no = 1; no <= 10; no++) {
+  var tablenum = 9;
+  console.log(tablenum + "*" + no + "=" + tablenum * no);
+}
 
 /*********** Function Definition,calling,parameter,arguments,expressions, and function Anonymous**************/
 
@@ -145,32 +145,32 @@ function sum(){
 }
 sum();
 
-// function sum(a,b)//function Parameters
-// {
-//     var a,b;
-//     var total=a+b;
-//     console.log(total);
-// }
-// sum(200,100);//function Arguments
+function sum(a,b)//function Parameters
+{
+    var a,b;
+    var total=a+b;
+    console.log(total);
+}
+sum(200,100);//function Arguments
 
 //Anonymus function
 
-// var funExp = function sum (a,b){
-//     return total= a+b;
-// }
-// // var sum = funExp(200,88)
-// // console.log(sum);
+var funExp = function sum (a,b){
+    return total= a+b;
+}
+// var sum = funExp(200,88)
+// console.log(sum);
 
-// console.log(funExp(10,20));// we can use this line directly for print without using above 2 lines
+console.log(funExp(10,20));// we can use this line directly for print without using above 2 lines
 
 /*********** EcmaScript Array Methods  **************/
 
 //Arrow Function
 
-// const sum =()=>{
-// return(`sum is ${(a=10)+ (b=16)}`)
-// }
-// console.log(sum())
+const sum =()=>{
+return(`sum is ${(a=10)+ (b=16)}`)
+}
+console.log(sum())
 
 // Array
 
@@ -2340,3 +2340,9 @@ here*/
 
 // console.log(countServicesPaidMoreThan200(servicesArray)); // Output: 3 (Sweeggy, Zomato, Dunzo)
 
+const myArray = [1, 2, 5, 6, 19];
+for (let i = 0; i < myArray.length; i++) {
+    setTimeout(function() {
+        console.log('Index: ' + i + ', element: ' + myArray[i]);
+    }, 3000);
+}
